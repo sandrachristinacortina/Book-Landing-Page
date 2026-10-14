@@ -368,25 +368,38 @@ summary:focus-visible {
 }
 
 .book-note {
-  margin-top: 30px;
-  padding: 15px 17px;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  border-left: 3px solid var(--pink);
+  grid-column: 1 / -1;
+  margin-top: -24px;
+  padding: 16px 32px 18px;
+  text-align: center;
+  border-top: 1px solid var(--pink);
+  border-bottom: 1px solid var(--pink);
   background: var(--pink-soft);
 }
 
 .note-mark {
+  display: block;
+  margin-bottom: 4px;
   color: var(--pink);
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .book-note p {
   margin: 0;
   font-family: var(--serif);
-  font-size: 16px;
-  line-height: 1.45;
+  line-height: 1.3;
+}
+
+.note-lead {
+  color: var(--muted);
+  font-size: 20px;
+}
+
+.note-turn {
+  margin-top: 4px !important;
+  color: var(--ink);
+  font-size: 31px;
+  font-style: italic;
 }
 
 .ideas-section {
@@ -486,10 +499,14 @@ summary:focus-visible {
 
 .sample-copy blockquote {
   max-width: 540px;
-  margin: 25px 0 12px;
+  margin: 25px 0 20px;
+  padding-left: 22px;
+  border-left: 5px solid var(--pink);
+  color: var(--ink);
   font-family: var(--serif);
-  font-size: 22px;
-  line-height: 1.5;
+  font-size: 26px;
+  font-style: italic;
+  line-height: 1.45;
 }
 
 .sample-note {
@@ -508,40 +525,11 @@ summary:focus-visible {
 }
 
 .sample-art {
-  position: relative;
-  width: min(100%, 360px);
-  aspect-ratio: 1;
+  display: block;
+  width: min(100%, 440px);
+  height: auto;
   justify-self: center;
-  border: 1px solid rgb(255 255 255 / 54%);
-  border-radius: 50%;
-}
-
-.sample-orbit {
-  position: absolute;
-  inset: 27px;
-  border: 1px solid rgb(255 255 255 / 55%);
-  border-radius: 50%;
-}
-
-.sample-sun {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 45%;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: var(--pink);
-  transform: translate(-50%, -50%);
-}
-
-.sample-line {
-  position: absolute;
-  top: 50%;
-  left: 10%;
-  width: 80%;
-  height: 1px;
-  background: rgb(23 23 23 / 62%);
-  transform: rotate(-32deg);
+  border-radius: 16px;
 }
 
 .download-section {
@@ -578,13 +566,15 @@ summary:focus-visible {
 
 .button-dark {
   flex: 0 0 auto;
-  background: var(--ink);
+  min-height: 60px;
+  padding: 0 30px;
+  background: var(--pink);
   color: white;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .button-dark:hover {
-  background: var(--blue-deep);
+  background: #d81976;
 }
 
 .author-section {
@@ -610,32 +600,25 @@ summary:focus-visible {
   background: #e7f0f6;
 }
 
-.author-monogram::before,
-.author-monogram::after {
+.author-monogram::before {
   position: absolute;
-  inset: 17px;
+  inset: -12px;
   border: 1px solid #a7c6da;
   border-radius: 50%;
   content: "";
 }
 
-.author-monogram::after {
-  inset: 35px;
-  border-color: rgb(237 39 136 / 50%);
-}
-
-.author-monogram span {
-  position: relative;
-  z-index: 1;
-  color: var(--blue-deep);
-  font-family: var(--serif);
-  font-size: 49px;
+.author-monogram img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .author-monogram i {
   position: absolute;
-  top: 38px;
-  right: 28px;
+  top: 22px;
+  right: 14px;
   width: 16px;
   height: 16px;
   border-radius: 50%;
@@ -952,6 +935,19 @@ summary:focus-visible {
     font-size: 15px;
   }
 
+  .book-note {
+    margin-top: 0;
+    padding: 12px 20px 14px;
+  }
+
+  .note-lead {
+    font-size: 17px;
+  }
+
+  .note-turn {
+    font-size: 23px;
+  }
+
   .ideas-section {
     padding: 67px 0 70px;
   }
@@ -990,11 +986,12 @@ summary:focus-visible {
   }
 
   .sample-copy blockquote {
-    font-size: 19px;
+    padding-left: 16px;
+    font-size: 21px;
   }
 
   .sample-art {
-    width: min(76vw, 280px);
+    width: min(100%, 360px);
   }
 
   .download-section {
@@ -1011,6 +1008,12 @@ summary:focus-visible {
     font-size: 28px;
   }
 
+  .button-dark {
+    min-height: 52px;
+    padding: 0 22px;
+    font-size: 17px;
+  }
+
   .author-section {
     padding: 61px 0 66px;
   }
@@ -1025,13 +1028,9 @@ summary:focus-visible {
     justify-self: start;
   }
 
-  .author-monogram span {
-    font-size: 39px;
-  }
-
   .author-monogram i {
-    top: 24px;
-    right: 18px;
+    top: 14px;
+    right: 8px;
   }
 
   .faq-section {
