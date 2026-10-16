@@ -1507,3 +1507,567 @@ summary:focus-visible {
     font-size: 23px;
   }
 }
+
+/* About page */
+
+.about-hero {
+  overflow: hidden;
+}
+
+.about-hero-inner {
+  padding-top: 70px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  align-items: center;
+  gap: 60px;
+}
+
+.about-hero-copy {
+  padding-bottom: 60px;
+  animation: enter-mobile 650ms ease-out both;
+}
+
+.about-hero-copy h1 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 66px;
+  font-weight: 500;
+  line-height: 1.04;
+}
+
+.about-hero-copy h1 span {
+  color: var(--pink);
+}
+
+.about-credentials {
+  margin: 18px 0 0;
+  color: var(--pink);
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.about-lede {
+  max-width: 470px;
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.about-portrait {
+  position: relative;
+  width: min(100%, 470px);
+  margin: 0;
+  justify-self: center;
+}
+
+.portrait-stage {
+  position: absolute;
+  right: 4%;
+  bottom: 0;
+  left: 4%;
+  height: 74%;
+  border-radius: 999px 999px 0 0;
+  background: var(--blue);
+}
+
+.portrait-stage::before {
+  position: absolute;
+  inset: -14px -14px 0;
+  border: 1px solid #a7c6da;
+  border-bottom: 0;
+  border-radius: 999px 999px 0 0;
+  content: "";
+}
+
+.portrait-dot {
+  position: absolute;
+  top: 9%;
+  right: 6%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--pink);
+}
+
+.about-portrait img {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.portrait-tag {
+  position: absolute;
+  z-index: 2;
+  max-width: 200px;
+  margin: 0;
+  padding: 12px 16px;
+  border-left: 4px solid var(--pink);
+  background: white;
+  box-shadow: 0 12px 30px rgb(23 60 85 / 14%);
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.portrait-tag strong {
+  display: block;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 19px;
+  font-weight: 500;
+}
+
+.portrait-tag-top {
+  top: 34%;
+  left: -12%;
+}
+
+.portrait-tag-bottom {
+  right: -8%;
+  bottom: 14%;
+}
+
+.about-quote {
+  padding: 72px 0 76px;
+  background: #e7f0f6;
+}
+
+.about-quote blockquote {
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: var(--serif);
+  font-size: 34px;
+  font-style: italic;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.about-quote blockquote::after {
+  margin: 26px auto 0;
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--pink);
+  content: "";
+}
+
+.about-story {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: grid;
+  grid-template-columns: 0.8fr 1fr;
+  gap: 80px;
+}
+
+.about-story-heading h2,
+.clinic-copy h2,
+.more-books-heading h2,
+.insta-inner h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 44px;
+  font-weight: 500;
+  line-height: 1.14;
+}
+
+.about-story-heading h2 em {
+  color: var(--blue-deep);
+  font-weight: 500;
+}
+
+.about-story-copy .book-lede {
+  margin-top: 0;
+  font-size: 19px;
+}
+
+.about-story-copy > p:not(.book-lede) {
+  margin: 0 0 15px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.clinic-section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 80px;
+}
+
+.clinic-copy > p:not(.eyebrow) {
+  max-width: 480px;
+  margin: 16px 0 6px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.clinic-services {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+
+.clinic-services li {
+  padding: 18px 0 18px 30px;
+  position: relative;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--serif);
+  font-size: 22px;
+}
+
+.clinic-services li::before {
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--pink);
+  content: "";
+  transform: translateY(-50%);
+}
+
+.insta-band {
+  background: var(--blue);
+}
+
+.insta-inner {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.insta-inner .eyebrow {
+  color: #173c55;
+}
+
+.insta-inner h2 {
+  max-width: 680px;
+  font-size: 34px;
+  font-style: italic;
+  line-height: 1.3;
+}
+
+.insta-button {
+  flex: 0 0 auto;
+  min-height: 58px;
+  padding: 0 26px;
+  font-size: 18px;
+}
+
+.insta-button svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: var(--pink);
+  stroke-width: 1.8;
+}
+
+.insta-button .dot {
+  fill: var(--pink);
+  stroke: none;
+}
+
+.more-books {
+  padding-top: 100px;
+  padding-bottom: 110px;
+}
+
+.more-books-heading {
+  margin-bottom: 44px;
+  text-align: center;
+}
+
+.other-book {
+  padding: 56px;
+  display: grid;
+  grid-template-columns: minmax(0, 0.7fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 64px;
+  border-top: 1px solid var(--pink);
+  border-bottom: 1px solid var(--pink);
+  background: var(--pink-soft);
+}
+
+.other-book-cover {
+  justify-self: center;
+  width: min(100%, 320px);
+  transform: rotate(-3deg);
+  transition: transform 260ms ease;
+}
+
+.other-book:hover .other-book-cover {
+  transform: rotate(0deg) translateY(-4px);
+}
+
+.other-book-cover img {
+  width: 100%;
+  height: auto;
+  border-radius: 3px 8px 8px 3px;
+  box-shadow:
+    -6px 0 0 rgb(0 0 0 / 8%) inset,
+    0 24px 50px rgb(80 20 50 / 25%);
+}
+
+.other-book-copy .resource-type {
+  margin-top: 0;
+  color: var(--pink);
+}
+
+.other-book-copy h3 {
+  margin: 10px 0 0;
+  font-family: var(--serif);
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.other-book-tagline {
+  margin: 14px 0 16px;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 19px;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.other-book-copy > p:not(.resource-type, .other-book-tagline) {
+  max-width: 540px;
+  margin: 0 0 28px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+@media (max-width: 1050px) {
+  .about-hero-copy h1 {
+    font-size: 54px;
+  }
+
+  .about-story,
+  .clinic-section {
+    gap: 48px;
+  }
+
+  .other-book {
+    padding: 44px 36px;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 720px) {
+  .about-hero-inner {
+    padding-top: 48px;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .about-hero-copy {
+    padding-bottom: 0;
+  }
+
+  .about-hero-copy h1 {
+    font-size: 42px;
+  }
+
+  .about-credentials {
+    font-size: 14px;
+  }
+
+  .about-lede {
+    font-size: 16px;
+  }
+
+  .about-portrait {
+    width: min(100%, 340px);
+  }
+
+  .portrait-tag {
+    max-width: 150px;
+    padding: 9px 12px;
+    font-size: 12px;
+  }
+
+  .portrait-tag strong {
+    font-size: 16px;
+  }
+
+  .portrait-tag-top {
+    left: -4px;
+  }
+
+  .portrait-tag-bottom {
+    right: -4px;
+  }
+
+  .about-quote {
+    padding: 52px 0 56px;
+  }
+
+  .about-quote blockquote {
+    font-size: 24px;
+  }
+
+  .about-story,
+  .clinic-section {
+    padding-top: 66px;
+    padding-bottom: 66px;
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .about-story-heading h2,
+  .clinic-copy h2,
+  .more-books-heading h2 {
+    font-size: 34px;
+  }
+
+  .clinic-services li {
+    font-size: 19px;
+  }
+
+  .insta-inner {
+    padding-top: 56px;
+    padding-bottom: 56px;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 26px;
+  }
+
+  .insta-inner h2 {
+    font-size: 25px;
+  }
+
+  .insta-button {
+    min-height: 50px;
+    font-size: 16px;
+  }
+
+  .more-books {
+    width: calc(100% - 36px);
+    padding-top: 66px;
+    padding-bottom: 72px;
+  }
+
+  .more-books-heading {
+    margin-bottom: 28px;
+  }
+
+  .other-book {
+    padding: 36px 22px;
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .other-book-cover {
+    width: min(78%, 260px);
+  }
+
+  .other-book-copy h3 {
+    font-size: 31px;
+  }
+}
+
+/* Buy in Print menu */
+
+.buy-menu {
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.buy-menu summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+.buy-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.buy-menu[open] summary {
+  background: var(--ink);
+  color: white;
+}
+
+.buy-menu[open] summary span {
+  transform: rotate(180deg);
+}
+
+.buy-menu-panel {
+  position: absolute;
+  z-index: 30;
+  top: calc(100% + 10px);
+  right: 0;
+  width: 250px;
+  padding: 10px 0;
+  border-top: 3px solid var(--pink);
+  background: white;
+  box-shadow: 0 18px 40px rgb(23 60 85 / 22%);
+  animation: enter-mobile 180ms ease-out both;
+}
+
+.buy-menu-label {
+  margin: 8px 20px 4px;
+  color: var(--blue-deep);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.buy-menu-label + a {
+  border-top: 0;
+}
+
+.buy-menu-panel a {
+  margin: 0 20px;
+  padding: 11px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--line);
+  font-size: 16px;
+  font-weight: 600;
+  transition: color 160ms ease;
+}
+
+.buy-menu-panel a span {
+  color: var(--pink);
+  transition: transform 160ms ease;
+}
+
+.buy-menu-panel a:hover {
+  color: var(--pink);
+}
+
+.buy-menu-panel a:hover span {
+  transform: translate(2px, -2px);
+}
+
+.buy-menu-panel .buy-menu-label:not(:first-child) {
+  margin-top: 14px;
+}
+
+@media (max-width: 720px) {
+  .buy-menu {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .buy-menu-panel {
+    width: min(250px, calc(100vw - 36px));
+  }
+
+  .buy-menu-panel a {
+    font-size: 15px;
+  }
+}
