@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#73a6cc" />
+    <meta
+      name="description"
+      content="Contact Dr. Sandra Cortina, author of Running on Empty, for media enquiries, speaking invitations, and professional collaborations."
+    />
+    <title>Contact | Running on Empty</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Running on Empty, home">
+        <img class="logo" src="Black-logo.png" alt="" />
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html#book">The Book</a></li>
+          <li><a href="index.html#sample">Read a Sample</a></li>
+          <li><a href="about.html">About the Author</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+      <details class="buy-menu">
+        <summary class="button button-outline header-cta">
+          Buy in Print <span aria-hidden="true">↓</span>
+        </summary>
+        <div class="buy-menu-panel">
+          <p class="buy-menu-label">Paperback</p>
+          <a
+            href="https://www.amazon.com/dp/1065823002"
+            target="_blank"
+            rel="noopener"
+            >Amazon.com <span aria-hidden="true">↗</span></a
+          >
+          <a
+            href="https://www.amazon.ca/dp/1065823002"
+            target="_blank"
+            rel="noopener"
+            >Amazon.ca <span aria-hidden="true">↗</span></a
+          >
+          <!-- IngramSpark: add the shop link here when available -->
+          <p class="buy-menu-label">eBook</p>
+          <a
+            href="https://www.amazon.com/dp/B0HL72GJ6B"
+            target="_blank"
+            rel="noopener"
+            >Kindle · Amazon.com <span aria-hidden="true">↗</span></a
+          >
+          <a
+            href="https://www.amazon.ca/dp/B0HL72GJ6B"
+            target="_blank"
+            rel="noopener"
+            >Kindle · Amazon.ca <span aria-hidden="true">↗</span></a
+          >
+          <a
+            href="https://books.apple.com/book/id6817152042"
+            target="_blank"
+            rel="noopener"
+            >Apple Books <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </details>
+    </header>
+
+    <main id="top">
+      <section class="contact-hero" aria-labelledby="contact-title">
+        <div class="section-wrap">
+          <p class="eyebrow">Media and collaborations</p>
+          <h1 id="contact-title">Let's collaborate<span>.</span></h1>
+          <p class="contact-deck">
+            For interview requests, speaking invitations, and professional
+            collaborations related to <em>Running on Empty</em> and
+            evidence-based obesity care.
+          </p>
+        </div>
+      </section>
+
+      <section
+        class="contact-section section-wrap"
+        aria-label="Contact form"
+      >
+        <aside class="contact-aside">
+          <p class="eyebrow eyebrow-dark">I'd love to hear from you</p>
+          <ul class="contact-topics">
+            <li>
+              <h2>Media and interviews</h2>
+              <p>
+                Print, broadcast, and podcast interviews, expert commentary,
+                and book features.
+              </p>
+            </li>
+            <li>
+              <h2>Speaking and events</h2>
+              <p>
+                Conferences, grand rounds, community talks, and book events.
+              </p>
+            </li>
+            <li>
+              <h2>Professional collaborations</h2>
+              <p>
+                Healthcare organizations, educators, researchers, and
+                advocacy groups.
+              </p>
+            </li>
+          </ul>
+
+          <div class="contact-note">
+            <p class="contact-note-title">Not for medical questions</p>
+            <p>
+              I can't give individual medical advice through this form. For
+              questions about your own health, please speak with your
+              healthcare professional.
+            </p>
+          </div>
+
+        </aside>
+
+        <form class="contact-form" id="contact-form">
+          <div class="form-heading">
+            <h2>Send a message</h2>
+            <p>Fields marked <span aria-hidden="true">*</span><span class="visually-hidden">with an asterisk</span> are required.</p>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="contact-name">Name <span aria-hidden="true">*</span></label>
+              <input
+                id="contact-name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                required
+              />
+            </div>
+            <div class="form-field">
+              <label for="contact-email">Email <span aria-hidden="true">*</span></label>
+              <input
+                id="contact-email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="contact-organization">Organization or outlet</label>
+              <input
+                id="contact-organization"
+                name="organization"
+                type="text"
+                autocomplete="organization"
+              />
+            </div>
+            <div class="form-field">
+              <label for="contact-type">Type of enquiry <span aria-hidden="true">*</span></label>
+              <select id="contact-type" name="enquiry_type" required>
+                <option value="" disabled selected>Choose one</option>
+                <option value="media">Media or interview</option>
+                <option value="speaking">Speaking or event</option>
+                <option value="collaboration">Professional collaboration</option>
+                <option value="other">Something else</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="contact-deadline">Deadline or event date</label>
+            <input id="contact-deadline" name="deadline" type="date" />
+          </div>
+
+          <div class="form-field">
+            <label for="contact-message">Message <span aria-hidden="true">*</span></label>
+            <textarea
+              id="contact-message"
+              name="message"
+              rows="7"
+              required
+            ></textarea>
+          </div>
+
+          <label class="form-check" for="contact-ack">
+            <input id="contact-ack" name="acknowledgement" type="checkbox" required />
+            <span>
+              I understand this form is for media and professional enquiries,
+              not personal medical questions.
+            </span>
+          </label>
+
+          <div class="form-actions">
+            <button class="button button-dark" type="submit">
+              Send Message <span aria-hidden="true">↗</span>
+            </button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div class="footer-main">
+        <a class="footer-identity" href="index.html" aria-label="Home">
+          <img class="footer-logo" src="Black-logo.png" alt="" />
+          <span>
+            <span class="footer-brand">Running on Empty<span>.</span></span>
+            <span class="footer-byline">By Dr. Sandra Cortina, MD</span>
+          </span>
+        </a>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="index.html#book">The Book</a>
+          <a href="index.html#sample">Read a Sample</a>
+          <a href="index.html#free-download">Free Download</a>
+          <a href="about.html">About the Author</a>
+          <a href="resources.html">Resources</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>Copyright © 2026 Sandra Cortina. All rights reserved.</p>
+        <p>
+          This website and book are for educational purposes and are not a
+          substitute for individual medical advice.
+        </p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
