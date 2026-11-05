@@ -1,9 +1,13 @@
 {
   "folders": [
-    {
-      "path": ".",
-    },
-  ],
-  "settings": {},
+	{
+		"path": "."
+	},
+	{
+		"path": "../../Documents/Running on Empty Book/Resources"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "Personal Website"
+  }
 }
-//more changes

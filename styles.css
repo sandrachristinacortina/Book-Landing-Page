@@ -526,6 +526,83 @@ summary:focus-visible {
   border-radius: 16px;
 }
 
+.gauge-face {
+  fill: #7ba3c8;
+  stroke: #20374f;
+  stroke-width: 10;
+}
+
+.gauge-scale {
+  fill: none;
+  stroke: #edf1f6;
+  stroke-linecap: round;
+  stroke-width: 12;
+}
+
+.gauge-scale path {
+  stroke-width: 8;
+}
+
+.gauge-actual {
+  stroke: #edf1f6;
+  stroke-dasharray: 30 40;
+  stroke-linecap: round;
+  stroke-width: 14;
+}
+
+.gauge-needle {
+  stroke: #db3c87;
+  stroke-linecap: round;
+  stroke-width: 26;
+  transform-box: view-box;
+  transform-origin: 900px 960px;
+  animation: gauge-sweep 7s ease-in-out infinite;
+}
+
+.gauge-hub {
+  fill: #db3c87;
+}
+
+.gauge-label {
+  fill: #20374f;
+  font-family: var(--sans);
+  font-size: 104px;
+  font-weight: 700;
+}
+
+/* Needle hovers near empty, sweeps up to where the tank really is, then falls back */
+@keyframes gauge-sweep {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  7% {
+    transform: rotate(4deg);
+  }
+  13% {
+    transform: rotate(-2deg);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+  45%,
+  58% {
+    transform: rotate(132deg);
+  }
+  80% {
+    transform: rotate(0deg);
+  }
+  85% {
+    transform: rotate(4deg);
+  }
+  90% {
+    transform: rotate(-2deg);
+  }
+  95% {
+    transform: rotate(2deg);
+  }
+}
+
 .download-section {
   min-height: 250px;
   margin-top: 100px;
@@ -1358,7 +1435,9 @@ summary:focus-visible {
   flex-direction: column;
   border-top: 3px solid var(--blue);
   background: white;
-  transition: transform 180ms ease, border-color 180ms ease;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease;
 }
 
 .resource-card:hover {
@@ -1757,26 +1836,6 @@ summary:focus-visible {
   line-height: 1.3;
 }
 
-.insta-button {
-  flex: 0 0 auto;
-  min-height: 58px;
-  padding: 0 26px;
-  font-size: 18px;
-}
-
-.insta-button svg {
-  width: 24px;
-  height: 24px;
-  fill: none;
-  stroke: var(--pink);
-  stroke-width: 1.8;
-}
-
-.insta-button .dot {
-  fill: var(--pink);
-  stroke: none;
-}
-
 .more-books {
   padding-top: 100px;
   padding-bottom: 110px;
@@ -1945,11 +2004,6 @@ summary:focus-visible {
 
   .insta-inner h2 {
     font-size: 25px;
-  }
-
-  .insta-button {
-    min-height: 50px;
-    font-size: 16px;
   }
 
   .more-books {
@@ -2262,7 +2316,8 @@ summary:focus-visible {
 .form-field select {
   appearance: none;
   padding-right: 40px;
-  background-image: linear-gradient(45deg, transparent 50%, var(--pink) 50%),
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--pink) 50%),
     linear-gradient(135deg, var(--pink) 50%, transparent 50%);
   background-position:
     calc(100% - 20px) 50%,
@@ -2382,5 +2437,61 @@ summary:focus-visible {
 
   .form-actions .button {
     width: 100%;
+  }
+}
+
+.contact-hero .section-wrap {
+  position: relative;
+}
+
+.contact-book {
+  position: absolute;
+  z-index: 3;
+  right: 56px;
+  bottom: -100px;
+  width: 190px;
+  height: auto;
+  border-radius: 2px 6px 6px 2px;
+  box-shadow:
+    inset 4px 0 0 rgb(0 0 0 / 10%),
+    0 22px 44px rgb(23 60 85 / 35%);
+  transform: rotate(5deg);
+  transition: transform 260ms ease;
+}
+
+.contact-book:hover {
+  transform: rotate(0deg) translateY(-6px);
+}
+
+@media (max-width: 1050px) {
+  .contact-book {
+    width: 150px;
+    right: 32px;
+  }
+}
+
+@media (max-width: 720px) {
+  .contact-book {
+    position: static;
+    width: 120px;
+    margin-top: 26px;
+    transform: rotate(-4deg);
+  }
+}
+
+.resources-hero .section-wrap {
+  position: relative;
+}
+
+.resources-book {
+  right: 72px;
+  bottom: -150px;
+  width: 200px;
+}
+
+@media (max-width: 1050px) {
+  .resources-book {
+    right: 32px;
+    width: 150px;
   }
 }
