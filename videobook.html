@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#73a6cc" />
+    <meta
+      name="description"
+      content="Watch Running on Empty free: an animated audiobook narrated by the author, Dr. Sandra Cortina, MD."
+    />
+    <title>The Videobook | Running on Empty</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Running on Empty, home">
+        <img class="logo" src="Black-logo.png" alt="" />
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html#book">The Book</a></li>
+          <li><a href="index.html#sample">Read a Sample</a></li>
+          <li><a href="videobook.html" aria-current="page">Videobook</a></li>
+          <li><a href="about.html">About the Author</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <details class="buy-menu">
+        <summary class="button button-outline header-cta">
+          Buy in Print <span aria-hidden="true">↓</span>
+        </summary>
+        <div class="buy-menu-panel">
+          <p class="buy-menu-label">Paperback</p>
+          <a
+            href="https://www.amazon.com/dp/1065823002"
+            target="_blank"
+            rel="noopener"
+            >Amazon.com <span aria-hidden="true">↗</span></a
+          >
+          <a
+            href="https://www.amazon.ca/dp/1065823002"
+            target="_blank"
+            rel="noopener"
+            >Amazon.ca <span aria-hidden="true">↗</span></a
+          >
+          <!-- IngramSpark: add the shop link here when available -->
+          <p class="buy-menu-label">eBook</p>
+          <a
+            href="https://www.amazon.com/dp/B0HL72GJ6B"
+            target="_blank"
+            rel="noopener"
+            >Kindle · Amazon.com <span aria-hidden="true">↗</span></a
+          >
+          <a
+            href="https://www.amazon.ca/dp/B0HL72GJ6B"
+            target="_blank"
+            rel="noopener"
+            >Kindle · Amazon.ca <span aria-hidden="true">↗</span></a
+          >
+          <a
+            href="https://books.apple.com/book/id6817152042"
+            target="_blank"
+            rel="noopener"
+            >Apple Books <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </details>
+    </header>
+
+    <main id="top">
+      <section class="resources-hero videobook-hero" aria-labelledby="videobook-title">
+        <div class="section-wrap">
+          <p class="eyebrow">The videobook</p>
+          <h1 id="videobook-title">
+            The whole book,<br /><em>read to you.</em>
+          </h1>
+          <p class="resources-deck">
+            <em>Running on Empty</em> as an animated audiobook, narrated by the
+            author. Start at the beginning, or go straight to the chapter you
+            need.
+          </p>
+          <p class="resources-meta">
+            <span>17 free videos</span> <span>·</span> About 7 hours
+            <span>·</span> No signup
+          </p>
+          <img
+            class="contact-book resources-book"
+            src="book-cover-front.jpg"
+            alt="Cover of Running on Empty by Sandra Cortina, MD"
+            width="678"
+            height="1018"
+          />
+        </div>
+      </section>
+
+      <section class="videobook-section section-wrap" aria-label="Videobook player and chapters">
+        <div class="videobook-layout">
+          <div class="videobook-stage">
+            <div class="player" id="player">
+              <a
+                class="player-poster"
+                href="https://www.youtube.com/watch?v=fWdCBG9Eu7I&amp;list=PLZSYc9sMiXRs"
+                target="_blank"
+                rel="noopener"
+                aria-label="Play Preface"
+              >
+                <img
+                  src="https://i.ytimg.com/vi/fWdCBG9Eu7I/maxresdefault.jpg"
+                  alt=""
+                  width="1280"
+                  height="720"
+                />
+                <span class="player-play" aria-hidden="true"></span>
+              </a>
+            </div>
+            <div class="now-playing">
+              <div>
+                <p class="now-playing-label" id="now-label">Start here</p>
+                <p class="now-playing-title" id="now-title">Preface</p>
+              </div>
+              <button class="button button-pink" id="next-chapter" type="button" hidden>
+                Next <span aria-hidden="true">→</span>
+              </button>
+            </div>
+            <p class="videobook-note">
+              Prefer to read?
+              <a href="Running-On-Empty-Full-Book.pdf" download
+                >Download the full book free</a
+              >, or
+              <a
+                href="https://www.youtube.com/playlist?list=PLZSYc9sMiXRs"
+                target="_blank"
+                rel="noopener"
+                >watch the playlist on YouTube</a
+              >.
+            </p>
+          </div>
+
+          <div class="videobook-chapters">
+            <h2 class="chapters-heading">Chapters</h2>
+            <ol class="chapter-list">
+              <li>
+                <a
+                  class="chapter"
+                  href="https://www.youtube.com/watch?v=fWdCBG9Eu7I&amp;list=PLZSYc9sMiXRs"
+                  target="_blank"
+                  rel="noopener"
+                  data-video="fWdCBG9Eu7I"
+                  data-label="Start here" aria-current="true"
+                >
+                  <img
+                    src="https://i.ytimg.com/vi/fWdCBG9Eu7I/mqdefault.jpg"
+                    alt=""
+                    width="320"
+                    height="180"
+                    loading="lazy"
+                  />
+                  <span class="chapter-text">
+                    <span class="chapter-meta">Start here · 8:02</span>
+                    <span class="chapter-title">Preface</span>
+                    <span class="chapter-desc">Why the GLP-1 era has brought so much confusion, and why new questions need a new way of thinking.</span>
+                  </span>
+                </a>
+              </li>
+            </ol>
+            <h3 class="chapter-part">Part I · Understanding Obesity</h3>
+            <ol class="chapter-list">
+              <li>
+                <a
+                  class="chapter"
+                  href="https://www.youtube.com/watch?v=5kHrjOe7HeM&amp;list=PLZSYc9sMiXRs"
+                  target="_blank"
+                  rel="noopener"
+                  data-video="5kHrjOe7HeM"
+                  data-label="Chapter 1"
+                >
+                  <img
+                    src="https://i.ytimg.com/vi/5kHrjOe7HeM/mqdefault.jpg"
+                    alt=""
+                    width="320"
+                    height="180"
+                    loading="lazy"
+                  />
+                  <span class="chapter-text">
+                    <span class="chapter-meta">Chapter 1 · 54:36</span>
+                    <span class="chapter-title">Why Obesity Needed a Different Answer</span>
+                    <span class="chapter-desc">Why another diet was never the answer, and why you did not fail your body.</span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="chapter"
+                  href="https://www.youtube.com/watch?v=UCA7hlAGBB8&amp;list=PLZSYc9sMiXRs"
+                  target="_blank"
+                  rel="noopener"
+                  data-video="UCA7hlAGBB8"
+                  data-label="Chapter 2"
+                >
+                  <img
+                    src="https://i.ytimg.com/vi/UCA7hlAGBB8/mqdefault.jpg"
+                    alt=""
+                    width="320"
+                    height="180"
+                    loading="lazy"
+                  />
+                  <span class="chapter-text">
+                    <span class="chapter-meta">Chapter 2 · 25:07</span>
+                    <span class="chapter-title">What Are We Calling Obesity?</span>
+                    <span class="chapter-desc">What BMI and body composition can and can’t tell us, and why diagnosis is about treatment, not measurement.</span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="chapter"
+                  href="https://www.youtube.com/watch?v=XzHKROM3Jto&amp;list=PLZSYc9sMiXRs"
+                  target="_blank"
+                  rel="noopener"
+                  data-video="XzHKROM3Jto"
+                  data-label="Chapter 3, Part 1"
+                >
+                  <img
+                    src="https://i.ytimg.com/vi/XzHKROM3Jto/mqdefault.jpg"
+                    alt=""
+                    width="320"
+                    height="180"
+                    loading="lazy"
+                  />
+                  <span class="chapter-text">
+                    <span class="chapter-meta">Chapter 3, Part 1 · 38:25</span>
+                    <span class="chapter-title">Stress Causes Storage</span>
+                    <span class="chapter-desc">Why storage is the body’s response to repeated stress, and how genetics and today’s food environment push the fuel gauge toward “empty.”</span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="chapter"
+                  href="https://www.youtube.com/watch?v=Hnf36lN1_Ns&amp;list=PLZSYc9sMiXRs"
+                  target="_blank"
+                  rel="noopener"
+                  data-video="Hnf36lN1_Ns"
+                  data-label="Chapter 3, Part 2"
+                >
+                  <img
+                    src="https://i.ytimg.com/vi/Hnf36lN1_Ns/mqdefault.jpg"
+                    alt=""
+                    width="320"
+                    height="180"
+                    loading="lazy"
+                  />
+                  <span class="chapter-text">
+                    <span class="chapter-meta">Chapter 3, Part 2 · 41:01</span>
+                    <span class="chapter-title">Stress Causes Storage</span>
+                    <span class="chapter-desc">How sleep, stress, medications and life stages shape weight beyond food.</span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="chapter"
+                  href="https://www.youtube.com/watch?v=17ybCrgHa6s&amp;list=PLZSYc9sMiXRs"
+                  target="_blank"
+                  rel="noopener"
+                  data-video="17ybCrgHa6s"
+                  data-label="Chapter 4"
+                >
+                  <img
+                    src="https://i.ytimg.com/vi/17ybCrgHa6s/mqdefault.jpg"
+                    alt=""
+                    width="320"
+                    height="180"
+                    loading="lazy"
+                  />
+                  <span class="chapter-text">
+                    <span class="chapter-meta">Chapter 4 · 1:03:01</span>
+                    <span class="chapter-title">Creating Room for Weight Loss</span>
+                    <span class="chapter-desc">How treatment moves the brain’s fuel gauge away from “empty,” and the questions patients ask most.</span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="chapter"
+                  href="https://www.youtube.com/watch?v=5Z3JqH2GNtY&amp;list=PLZSYc9sMiXRs"
+                  target="_blank"
+                  rel="noopener"
+                  data-video="5Z3JqH2GNtY"
+                  data-label="Chapter 5"
+                >
+                  <img
+                    src="https://i.ytimg.com/vi/5Z3JqH2GNtY/mqdefault.jpg"
+                    alt=""
+                    width="320"
+                    height="180"
+                    loading="lazy"
+                  />
+                  <span class="chapter-text">
+                    <span class="chapter-meta">Chapter 5 · 23:20</span>
+                    <span class="chapter-title">Why Everyone Wants a Piece of Your Obesity</span>
+                    <span class="chapter-desc">The business of weight loss, and why charging for access to care has become so common.</span>
+                  </span>
+                </a>
+              </li>
+            </ol>
+            <h3 class="chapter-part">Part II · Supporting Obesity Treatment</h3>
+            <ol class="chapter-list">
+              <li>
+                <a
+                  class="chapter"
+                  href="https://www.youtube.com/watch?v=ybOcyATGhgI&amp;list=PLZSYc9sMiXRs"
+                  target="_blank"
+                  rel="noopener"
+                  data-video="ybOcyATGhgI"
+                  data-label="Chapter 6"
+                >
+                  <img
+                    src="https://i.ytimg.com/vi/ybOcyATGhgI/mqdefault.jpg"
+                    alt=""
+                    width="320"
+                    height="180"
+                    loading="lazy"
+                  />
+                  <span class="chapter-text">
+                    <span class="chapter-meta">Chapter 6 · 21:07</span>
+                    <span class="chapter-title">Why Your Doctor Never Prescribed You a Diet</span>
+                    <span class="chapter-desc">What years of dieting really teach us, and what obesity specialists actually recommend instead.</span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="chapter"
+                  href="https://www.youtube.com/watch?v=2tUMsfyGIAk&amp;list=PLZSYc9sMiXRs"
+                  target="_blank"
+                  rel="noopener"
+                  data-video="2tUMsfyGIAk"
+                  data-label="Chapter 7"
+                >
+                  <img
+                    src="https://i.ytimg.com/vi/2tUMsfyGIAk/mqdefault.jpg"
+                    alt=""
+                    width="320"
+                    height="180"
+                    loading="lazy"
+                  />
+                  <span class="chapter-text">
+                    <span class="chapter-meta">Chapter 7 · 25:20</span>
+                    <span class="chapter-title">Fear-Based Fitness</span>
+                    <span class="chapter-desc">Separating evidence from fear, and why exercise is too important to be judged by the scale.</span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="chapter"
+                  href="https://www.youtube.com/watch?v=KOQHk41oiVQ&amp;list=PLZSYc9sMiXRs"
+                  target="_blank"
+                  rel="noopener"
+                  data-video="KOQHk41oiVQ"
+                  data-label="Chapter 8"
+                >
+                  <img
+                    src="https://i.ytimg.com/vi/KOQHk41oiVQ/mqdefault.jpg"
+                    alt=""
+                    width="320"
+                    height="180"
+                    loading="lazy"
+                  />
+                  <span class="chapter-text">
+                    <span class="chapter-meta">Chapter 8 · 19:40</span>
+                    <span class="chapter-title">Why Sleep Matters More Than You Think</span>
+                    <span class="chapter-desc">Why a tired brain believes the fuel tank is running low, and what you can do about it.</span>
+                  </span>
+                </a>
+              </li>
+            </ol>
+            <h3 class="chapter-part">Part III · Weight Stewardship</h3>
+            <ol class="chapter-list">
+              <li>
+                <a
+                  class="chapter"
+                  href="https://www.youtube.com/watch?v=ieM6sguNHbs&amp;list=PLZSYc9sMiXRs"
+                  target="_blank"
+                  rel="noopener"
+                  data-video="ieM6sguNHbs"
+                  data-label="Chapter 9"
+                >
+                  <img
+                    src="https://i.ytimg.com/vi/ieM6sguNHbs/mqdefault.jpg"
+                    alt=""
+                    width="320"
+                    height="180"
+                    loading="lazy"
+                  />
+                  <span class="chapter-text">
+                    <span class="chapter-meta">Chapter 9 · 14:46</span>
+                    <span class="chapter-title">Hope That Doesn’t Depend on Finish Lines</span>
+                    <span class="chapter-desc">Why finish lines create fragile hope, and why weight stewardship offers a hope that lasts.</span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="chapter"
+                  href="https://www.youtube.com/watch?v=7FNIvlOOimI&amp;list=PLZSYc9sMiXRs"
+                  target="_blank"
+                  rel="noopener"
+                  data-video="7FNIvlOOimI"
+                  data-label="Chapter 10"
+                >
+                  <img
+                    src="https://i.ytimg.com/vi/7FNIvlOOimI/mqdefault.jpg"
+                    alt=""
+                    width="320"
+                    height="180"
+                    loading="lazy"
+                  />
+                  <span class="chapter-text">
+                    <span class="chapter-meta">Chapter 10 · 6:49</span>
+                    <span class="chapter-title">Why Words Matter</span>
+                    <span class="chapter-desc">Why obesity deserves the same precision in language as every other chronic disease.</span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="chapter"
+                  href="https://www.youtube.com/watch?v=tNduw1iBK-c&amp;list=PLZSYc9sMiXRs"
+                  target="_blank"
+                  rel="noopener"
+                  data-video="tNduw1iBK-c"
+                  data-label="Chapter 11"
+                >
+                  <img
+                    src="https://i.ytimg.com/vi/tNduw1iBK-c/mqdefault.jpg"
+                    alt=""
+                    width="320"
+                    height="180"
+                    loading="lazy"
+                  />
+                  <span class="chapter-text">
+                    <span class="chapter-meta">Chapter 11 · 8:57</span>
+                    <span class="chapter-title">The Comparison Trap and Why Thoughts Matter</span>
+                    <span class="chapter-desc">Why your results don’t need to look like anyone else’s.</span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="chapter"
+                  href="https://www.youtube.com/watch?v=6uNBnaSq3x8&amp;list=PLZSYc9sMiXRs"
+                  target="_blank"
+                  rel="noopener"
+                  data-video="6uNBnaSq3x8"
+                  data-label="Chapter 12"
+                >
+                  <img
+                    src="https://i.ytimg.com/vi/6uNBnaSq3x8/mqdefault.jpg"
+                    alt=""
+                    width="320"
+                    height="180"
+                    loading="lazy"
+                  />
+                  <span class="chapter-text">
+                    <span class="chapter-meta">Chapter 12 · 17:53</span>
+                    <span class="chapter-title">The Weight Stewardship Mindset</span>
+                    <span class="chapter-desc">The middle ground between fear and complacency.</span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="chapter"
+                  href="https://www.youtube.com/watch?v=VUYO_Lnz6VU&amp;list=PLZSYc9sMiXRs"
+                  target="_blank"
+                  rel="noopener"
+                  data-video="VUYO_Lnz6VU"
+                  data-label="Chapter 13"
+                >
+                  <img
+                    src="https://i.ytimg.com/vi/VUYO_Lnz6VU/mqdefault.jpg"
+                    alt=""
+                    width="320"
+                    height="180"
+                    loading="lazy"
+                  />
+                  <span class="chapter-text">
+                    <span class="chapter-meta">Chapter 13 · 28:44</span>
+                    <span class="chapter-title">What Is the Goal of Weight Loss?</span>
+                    <span class="chapter-desc">How obesity specialists measure progress, and when more weight loss stops helping.</span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="chapter"
+                  href="https://www.youtube.com/watch?v=5LGhcl74r7E&amp;list=PLZSYc9sMiXRs"
+                  target="_blank"
+                  rel="noopener"
+                  data-video="5LGhcl74r7E"
+                  data-label="Chapter 14"
+                >
+                  <img
+                    src="https://i.ytimg.com/vi/5LGhcl74r7E/mqdefault.jpg"
+                    alt=""
+                    width="320"
+                    height="180"
+                    loading="lazy"
+                  />
+                  <span class="chapter-text">
+                    <span class="chapter-meta">Chapter 14 · 10:51</span>
+                    <span class="chapter-title">Best Weight</span>
+                    <span class="chapter-desc">Why goal weights can do more harm than good, and an introduction to best weight.</span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="chapter"
+                  href="https://www.youtube.com/watch?v=g3Bu9jJWTsQ&amp;list=PLZSYc9sMiXRs"
+                  target="_blank"
+                  rel="noopener"
+                  data-video="g3Bu9jJWTsQ"
+                  data-label="Chapter 15"
+                >
+                  <img
+                    src="https://i.ytimg.com/vi/g3Bu9jJWTsQ/mqdefault.jpg"
+                    alt=""
+                    width="320"
+                    height="180"
+                    loading="lazy"
+                  />
+                  <span class="chapter-text">
+                    <span class="chapter-meta">Chapter 15 · 8:08</span>
+                    <span class="chapter-title">Obesity Is Chronic – And That Is Clarity</span>
+                    <span class="chapter-desc">How understanding obesity as a chronic disease replaces blame with clarity.</span>
+                  </span>
+                </a>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div class="footer-main">
+        <a class="footer-identity" href="index.html" aria-label="Home">
+          <img class="footer-logo" src="Black-logo.png" alt="" />
+          <span>
+            <span class="footer-brand">Running on Empty<span>.</span></span>
+            <span class="footer-byline">By Dr. Sandra Cortina, MD</span>
+          </span>
+        </a>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="index.html#book">The Book</a>
+          <a href="index.html#sample">Read a Sample</a>
+          <a href="videobook.html">Videobook</a>
+          <a href="index.html#free-download">Free Download</a>
+          <a href="about.html">About the Author</a>
+          <a href="resources.html">Resources</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>Copyright © 2026 Sandra Cortina. All rights reserved.</p>
+        <p>
+          This website and book are for educational purposes and are not a
+          substitute for individual medical advice.
+        </p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
