@@ -133,7 +133,17 @@
 
         </aside>
 
-        <form class="contact-form" id="contact-form">
+        <form
+          class="contact-form"
+          id="contact-form"
+          action="https://api.web3forms.com/submit"
+          method="POST"
+        >
+          <input type="hidden" name="access_key" value="76aa9e31-71d7-466b-af88-cbdf7d59719e" />
+          <input type="hidden" name="subject" value="New enquiry from the Running on Empty website" />
+          <input type="hidden" name="from_name" value="Running on Empty website" />
+          <input type="checkbox" name="botcheck" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
           <div class="form-heading">
             <h2>Send a message</h2>
             <p>Fields marked <span aria-hidden="true">*</span><span class="visually-hidden">with an asterisk</span> are required.</p>

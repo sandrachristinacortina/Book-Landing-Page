@@ -76,3 +76,35 @@ if (player) {
   nextButton.addEventListener("click", () => play(current + 1));
   nextButton.hidden = false;
 }
+
+// Contact form: send via Web3Forms without leaving the page
+const contactForm = document.querySelector("#contact-form");
+
+if (contactForm) {
+  const status = contactForm.querySelector(".form-status");
+  const submitButton = contactForm.querySelector('button[type="submit"]');
+
+  contactForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    submitButton.disabled = true;
+    status.textContent = "Sending…";
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: new FormData(contactForm),
+      });
+      const result = await response.json();
+      if (!response.ok || !result.success) throw new Error(result.message);
+
+      contactForm.reset();
+      status.textContent = "Thank you — your message has been sent.";
+    } catch {
+      status.textContent =
+        "Sorry, your message couldn't be sent. Please try again in a moment.";
+    } finally {
+      submitButton.disabled = false;
+    }
+  });
+}
