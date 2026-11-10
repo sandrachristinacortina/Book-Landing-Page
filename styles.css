@@ -74,10 +74,10 @@ summary:focus-visible {
 .wordmark-dr {
   font-family: "Poppins", var(--sans);
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.32em;
   text-transform: uppercase;
-  color: var(--pink);
+  color: white;
 }
 
 .wordmark-name {
