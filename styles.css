@@ -64,10 +64,25 @@ summary:focus-visible {
   flex: 0 0 auto;
 }
 
-.logo {
-  width: 90px;
-  height: 90px;
-  object-fit: contain;
+.wordmark {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.wordmark-dr {
+  font-family: "Poppins", var(--sans);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.wordmark-name {
+  font-family: "DM Serif Display", var(--serif);
+  font-size: 32px;
+  line-height: 1;
 }
 
 .nav {
@@ -802,30 +817,27 @@ summary:focus-visible {
   gap: 18px;
 }
 
-.footer-logo {
-  width: 76px;
-  height: 76px;
-  object-fit: contain;
-  filter: invert(1);
+.footer-identity {
+  flex-wrap: wrap;
 }
 
-.footer-identity > span {
-  display: grid;
-  gap: 5px;
-}
-
-.footer-brand {
-  font-family: var(--serif);
-  font-size: 22px;
-}
-
-.footer-brand span {
+.wordmark-footer .wordmark-dr {
   color: #ff72b4;
+}
+
+.wordmark-footer .wordmark-name {
+  font-size: 30px;
 }
 
 .footer-byline {
   color: #b9c0c4;
   font-size: 14px;
+}
+
+.footer-byline em {
+  font-family: var(--serif);
+  font-style: italic;
+  color: white;
 }
 
 .footer-nav {
@@ -917,8 +929,12 @@ summary:focus-visible {
     font-size: 10px;
   }
 
-  .logo {
-    width: 70px;
+  .wordmark-name {
+    font-size: 26px;
+  }
+
+  .wordmark-dr {
+    font-size: 11px;
   }
 
   .header-cta {
@@ -957,9 +973,16 @@ summary:focus-visible {
     grid-row: 1;
   }
 
-  .logo {
-    width: 67px;
-    height: 53px;
+  .wordmark {
+    padding: 6px 0;
+  }
+
+  .wordmark-name {
+    font-size: 24px;
+  }
+
+  .wordmark-dr {
+    font-size: 10px;
   }
 
   .header-cta {
@@ -1213,9 +1236,8 @@ summary:focus-visible {
     gap: 26px;
   }
 
-  .footer-logo {
-    width: 64px;
-    height: 64px;
+  .wordmark-footer .wordmark-name {
+    font-size: 26px;
   }
 
   .footer-nav {
